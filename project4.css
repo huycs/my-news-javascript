@@ -1,0 +1,105 @@
+.body {
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    display: flex;
+    float: right;
+    padding-right: 0;
+}
+
+a {
+    font-size: 1.5em;
+}
+
+img {    
+    width: calc(100% - 20px);
+    height: 96%;      
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border: 1px solid lightgray;
+}
+
+/* Search */
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+#searchImage {
+    width: 4em;
+    height: 70%;       
+    float: left;
+    margin: .5em .5em;
+}
+
+#searchImage:hover {
+    cursor: pointer;
+}
+
+#forSearch {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.searchContent {
+    background-color: #f4f4f4;
+    margin: 10% auto;
+    padding: 3em;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2), 5px 7px 0 rgba(0,0,0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
+#closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+#closeBtn:hover, 
+#closeBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen{
+    from{opacity: 0}
+    to{opacity: 1}
+}
+
+/*Responsive */
+
+@media(max-width: 992px) {
+    img {
+        height: 60%;
+    }
+}
+
+@media(max-width: 650px) {
+    img {
+        height: 20%;
+    }
+}
